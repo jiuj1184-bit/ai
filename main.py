@@ -1,4 +1,8 @@
-impdrt strealit as st
-st. title(나의 첫 웹 서비스 만들기)
-st.text input(이름을 입력해주세요)
-st.selecebdx(좋아하는 음식을 선택해줘,[치킨,새우,피자])
+import strealit as st
+st.title('나의 첫 웹 서비스 만들기')
+a=st.text_input('이름을 입력해주세요')
+b=st.selecebox('좋아하는 음식을 선택해줘',['치킨','새우','피자'])
+if st.button('인사말 생성'):
+  st.write(a+'님, 안녕하세요')
+  st.info('반갑습니다')
+  st.warning(b+'음식을 좋아하시나봐요!')
