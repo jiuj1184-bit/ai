@@ -1,11 +1,7 @@
 import streamlit as st
-import pandas as pd
 
 # 제목
 st.title("🍽 소스 조합 추천 앱")
-
-# 엑셀 파일 불러오기
-df = pd.read_excel("식품의약품안전처_가공식품 품목별 영양성분 DB_20221231.xlsx")
 
 # 소스 조합 데이터
 pairing_data = {
@@ -44,14 +40,17 @@ if st.button("추천 받기"):
     if ingredient in pairing_data:
 
         st.subheader("추천 소스")
+
         for sauce in pairing_data[ingredient]["소스"]:
             st.write("•", sauce)
 
         st.subheader("추천 허브")
+
         for herb in pairing_data[ingredient]["허브"]:
             st.write("•", herb)
 
         st.subheader("플레이팅 추천")
+
         for plating in pairing_data[ingredient]["플레이팅"]:
             st.write("•", plating)
 
